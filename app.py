@@ -1,10 +1,17 @@
 import pandas as pd
 import re
+import os
 import string
 import joblib
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 import nltk
+
+# Stopwords
+APP = os.path.abspath(__file__)
+FILE_DIR, APP_NAME = os.path.split(APP)
+NLTK_DATA_PATH = os.path.join(FILE_DIR, 'nltk_data')
+nltk.data.path.append(NLTK_DATA_PATH)
 from nltk.corpus import stopwords
 all_stopwords = stopwords.words('english')
 all_stopwords.remove('not')
