@@ -4,3 +4,4 @@ Flask==1.1.2
 Flask-RESTful==0.3.8
 nltk==3.5
 gunicorn==19.7.1
+scikit-learn>=0.18
